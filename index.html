@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Light Up</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="icon" href="light-bulb.png">
+</head>
+<body class="flex items-center min-h-screen justify-center"
+      x-data="{isOn:true}"
+      :class="isOn ? 'bg-white' : 'bg-black'">
+<button class="rounded-lg px-4 py-2 text-2xl bg-green-300 hover:bg-green-500 font-semibold"
+        @click="isOn = !isOn"
+        :class="isOn ? 'bg-green-300 hover:bg-green-500 text-black' : 'bg-red-500 hover:bg-red-700 text-white'">
+    <span x-text="isOn ? 'ON' : 'OFF'"></span>
+</button>
+</body>
+</html>
